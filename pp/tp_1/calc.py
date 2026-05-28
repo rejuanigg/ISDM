@@ -34,18 +34,34 @@ def convert(type_to, value):
     return output
 
 
+def show_menu():
+    print()
+    print("=" * 36)
+    print("     Conversor de Temperaturas")
+    print("=" * 36)
+    print("1) Celsius a Fahrenheit")
+    print("2) Fahrenheit a Celsius")
+    print("3) Salir")
+    print("-" * 36)
+
+
 while (True):
-    initial_value = int(input('Ingresá la opcion 1. C to F 2. F to C 3. Exit: '))
+    
+    show_menu()
+    
+    initial_value = int(input('Ingresá la opción:'))
     
     match initial_value:
         case 1:
-            to_fahr = float(input('Ingresá el valor a convertir: '))
+            to_fahr = float(input('Ingresá el valor celsius a convertir: '))
             print(f"De {to_fahr}°C a {convert('F', to_fahr):.1f}°F")
         case 2:
-            to_cel = float(input('Ingresá el valor a convertir: '))
+            to_cel = float(input('Ingresá el valor a fahrenheit a convertir: '))
             print(f"De {to_cel}°F a {convert('C', to_cel):.1f}°C")
         case 3:
             print('Saliendo...')
             break
         case _:
-            print('Opcion Invalida, vuelve a intentar')
+            print("=" * 36)
+            print("Opción inválida. Elegí 1, 2 o 3.")
+            print("=" * 36)
