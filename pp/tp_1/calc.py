@@ -35,17 +35,17 @@ def convert(type_to, value):
 
 
 while (True):
-    initial_value = int(input('Ingresá la opcion 1. C to F 2. F to C 3. Exit'))
+    initial_value = int(input('Ingresá la opcion 1. C to F 2. F to C 3. Exit: '))
     
     match initial_value:
         case 1:
-            to_fahr = float(input('Ingresá el valor a convertir'))
-            print(convert('F', to_fahr))
+            to_fahr = float(input('Ingresá el valor a convertir: '))
+            print(f"De {to_fahr}°C a {convert('F', to_fahr):.1f}°F")
         case 2:
-            to_cel = float(input('Ingresá el valor a convertir'))
-            print(convert('C', to_cel))
+            to_cel = float(input('Ingresá el valor a convertir: '))
+            print(f"De {to_cel}°F a {convert('C', to_cel):.1f}°C")
         case 3:
             print('Saliendo...')
             break
         case _:
-            print('Opcion Invalida')
+            print('Opcion Invalida, vuelve a intentar')
